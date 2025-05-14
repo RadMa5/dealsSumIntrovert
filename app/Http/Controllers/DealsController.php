@@ -42,7 +42,7 @@ class DealsController extends Controller
             $status = "Success";
             $pagesAvailable = true;
             $sum = 0;
-            while ($pages < 50) {
+            while ($pagesAvailable) {
                 try {
                     $request = $guzzClient->request('GET', 'lead/list?status[]=142&count=50&offset=' . $pages . '&key=' . $client["api"] );
                     
